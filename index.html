@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="form-page">
+    <div class="form-page__cards">
+      <div class="form-page__front-card">
+        <div class="form-page__card-logo">
+          <img src="assets/images/card-logo.svg" alt="Card logo">
+        </div>
+
+        <div class="form-page__card-number">0000 0000 0000 0000</div>
+
+        <div class="form__page-card-footer">
+          <div class="form__page-card-name">JANE APPLESEED</div>
+          <div class="form__page-card-date"><span class="form__page-card-mm">00</span>/<span class="form__page-card-yy">00</span></div>
+        </div>
+      </div>
+
+      <div class="form-page__back-card">
+        <div class="form-page__back-card-cvc">000</div>
+      </div>
+    </div>
+
+    <div class="form-page__form">
+      <form class="form" action="#" method="post">
+        <label class="form__label" for="name">CARDHOLDER NAME</label>
+        <div class="form__inputs-container">
+          <div class="form__inputs-focus-border">
+            <input class="form__inputs" id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" autofocus>
+          </div>
+          <div class="form__inputs-error-blank">Can't be blank</div>
+          <div class="form__inputs-error-min-char">Min 2 letters</div>
+          <div class="form__inputs-error-format">Only letters</div>
+        </div>
+
+        <label class="form__label" for="card-number">CARD NUMBER</label>
+        <div class="form__inputs-container">
+          <div class="form__inputs-focus-border">
+            <input class="form__inputs" id="card-number" type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+          </div>
+          <div class="form__inputs-error-blank">Can't be blank</div>
+          <div class="form__inputs-error-format">Wrong format, numbers only</div>
+          <div class="form__inputs-error-min-char">16 digits</div>
+        </div>
+
+        <div class="form__labels-date-cvc">
+          <label class="form__label" for="exp-date">EXP. DATE (MM/YY)</label>
+          <label class="form__label form__label-cvc" for="form-cvc">CVC</label>
+        </div>
+        
+        <div class="form__date-cvc">
+          <div class="form__inputs-container">
+            <div class="form__inputs-focus-border form__inputs-date">
+              <input class="form__inputs" id="exp-date" type="text" name="exp-date-mm" placeholder="MM">
+            </div>
+            <div class="form__inputs-error-blank">Can't be blank</div>
+            <div class="form__inputs-error-format">Numbers only</div>
+            <div class="form__inputs-error-min-char">2 numbers</div>
+          </div>
+          <div class="form__inputs-container">
+            <div class="form__inputs-focus-border form__inputs-date">
+              <input class="form__inputs" type="text" name="exp-date-yy" placeholder="YY">
+            </div>
+          </div>
+
+          <div class="form__inputs-container form__inputs-container-cvc">
+            <div class="form__inputs-focus-border form__inputs-cvc">
+              <input class="form__inputs" type="text" name="cvc" id="form-cvc" placeholder="e.g. 123">
+            </div>
+            <div class="form__inputs-error-blank">Can't be blank</div>
+            <div class="form__inputs-error-format">Wrong format, numbers only</div>
+            <div class="form__inputs-error-min-char">3 or 4 numbers</div>
+          </div>
+        </div>
+        
+        <button class="button">Confirm</button>
+      </form>
+
+      <div class="success-message">
+        <img class="success-message__img" src="assets/images/icon-complete.svg" alt="Checked icon">
+        <div class="success-message__thanks">THANK YOU!</div>
+        <div class="success-message__desc">We've added your card details</div>
+        <button class="button">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+:root {
+    --active-input-border: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --input-errors: hsl(0, 100%, 66%);
+
+    --white: hsl(0, 100%, 100%);
+    --gray-200: hsl(270, 3%, 87%);
+    --gray-400: hsl(212, 12%, 71%);
+    --purple-950: hsl(278, 68%, 11%);
+
+    font-family: "Space grotesk";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.form-page {
+    display: flex;
+}
+
+.form-page__cards {
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 33.54vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.form-page__front-card, .form-page__back-card {
+    width: 447px;
+    height: 245px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    filter: drop-shadow(2px 30px 30px rgba(39, 39, 39, 0.2));
+}
+
+.form-page__front-card {
+    background-image: url("../images/bg-card-front.png");
+    right: -129px;
+    padding: 28px 32px;
+    color: var(--white);
+    margin-bottom: 37px;
+}
+
+.form-page__card-number {
+    margin-top: 61px;
+    margin-bottom: 26px;
+    font-size: 27px;
+    letter-spacing: 4px;
+}
+
+.form__page-card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__page-card-name, .form__page-card-date {
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.form-page__back-card {
+    background-image: url("../images/bg-card-back.png");
+    right: -222px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form-page__back-card-cvc {
+    margin-right: 58px;
+    margin-bottom: 3px;
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+
+
+.form-page__form {
+    flex: 1;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 382px;
+    margin-left: 123px;
+}
+
+.form__label {
+    color: var(--purple-950);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form__inputs-focus-border {
+    background: transparent;
+    border-radius: 9px;
+    border: 1px solid transparent;
+}
+
+.form__inputs-focus-border-active {
+    background: var(--active-input-border);
+}
+
+.form__inputs {
+    font-size: 18px;
+    padding: 10px 16px;
+    font-family: "Space grotesk";
+    border-radius: 8px;
+    border: 1px solid var(--gray-200);
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+}
+
+.form__inputs::placeholder {
+    color: var(--gray-400);
+    font-weight: normal;
+}
+
+.form__inputs:focus {
+    border-color: transparent;
+}
+
+.form__inputs--error {
+    border-color: var(--input-errors);
+}
+
+.form__labels-date-cvc {
+    display: flex;
+}
+
+.form__label-cvc {
+    margin-left: 51px;
+}
+
+.form__date-cvc {
+    display: flex;
+}
+
+.form__inputs-container {
+    margin-bottom: 25px;
+}
+
+.form__inputs-date {
+    max-width: 80px;
+    margin-right: 10px;
+}
+
+.form__inputs-container-cvc {
+    margin-left: 12px;
+}
+
+.form__inputs-cvc {
+    max-width: 190px;
+}
+
+.form__inputs-error-blank, .form__inputs-error-format, .form__inputs-error-min-char {
+    color: var(--input-errors);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 7px;
+    display: none;
+}
+
+.button {
+    font-family: "Space grotesk";
+    font-size: 18px;
+    color: var(--white);
+    background-color: var(--purple-950);
+    padding: 15px;
+    border-radius: 8px;
+    border: 0;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+
+
+.success-message {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: 382px;
+    text-align: center;
+    margin-left: 123px;
+}
+
+.success-message__img {
+    width: 80px;
+    margin: auto;
+}
+
+.success-message__thanks {
+    margin-top: 35px;
+    margin-bottom: 13px;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.success-message__desc {
+    font-size: 18px;
+    color: var(--gray-400);
+    margin-bottom: 35px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .form {
+        transform: scale(0.9);
+    }
+
+    .form-page__front-card, .form-page__back-card {
+        transform: scale(0.8);
+    }
+
+    .form-page__front-card {
+        margin-bottom: -17px;
+        right: -110px;
+    }
+
+    .form-page__back-card {
+        right: -190px;
+    }
+
+    .success-message {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 840px) {
+    .form-page {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .form-page__cards {
+        width: auto;
+        height: 380px;
+        align-items: center;
+        background-image: url("../images/bg-main-mobile.png");
+    }
+
+    .form-page__front-card, .form-page__back-card {
+        position: absolute;
+        transform: scale(0.9);
+    }
+
+    .form-page__front-card {
+        right: 195px;
+        margin-bottom: 0;
+        top: 238px;
+        z-index: 1;
+    }
+
+    .form-page__back-card {
+        right: 125px;
+        top: 113px;
+    }
+
+    .form {
+        margin-left: 0;
+        transform: scale(1);
+    }
+
+    .success-message {
+        margin-left: 0;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 450px) {
+    .form-page__cards {
+        height: 240px;
+    }
+
+    .form-page__front-card, .form-page__back-card {
+        transform: scale(0.65);
+    }
+
+    .form-page__front-card {
+        right: auto;
+        left: -64px;
+        top: 80px;
+    }
+
+    .form-page__back-card {
+        right: -64px;
+        top: -10px;
+    }
+
+    .form {
+        margin-top: -45px;
+        max-width: 326px;
+    }
+
+    .success-message {
+        max-width: 326px;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

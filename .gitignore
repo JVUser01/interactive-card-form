@@ -1,0 +1,19 @@
+# Design files (please do not remove 🙂)
+*.sketch
+*.fig
+*.xd
+/design
+style-guide.md
+preview.jpg
+
+# IDEs and editors
+/.idea
+/.vscode
+*.swp
+*.swo
+
+# Misc
+*.log
+*.pem
+.DS_Store
+Thumbs.db
