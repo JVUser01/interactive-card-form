@@ -136,6 +136,8 @@ function eraseErrors() {
     document.querySelectorAll(".form__inputs-error-format").forEach((item) => {
         item.style.display = "none";
     });
+
+    form.classList.remove("form--invalid");
 }
 
 function validateField(input) {
@@ -152,14 +154,17 @@ function validateField(input) {
             if(inputValue === "") {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-blank").style.display = "block";
+                form.classList.add("form--invalid")
                 send = false
             } else if(inputValue.length < 2) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-min-char").style.display = "block";
+                form.classList.add("form--invalid")
                 send = false
             } else if(!nameRegex.test(inputValue)) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-format").style.display = "block";
+                form.classList.add("form--invalid")
                 send = false
             }
             break;
@@ -168,14 +173,17 @@ function validateField(input) {
             if(inputValue === "") {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-blank").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             } else if(hasLetterRegex.test(inputValue)) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-format").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             } else if(!cardNumberRegex.test(inputValue.replace(/\s/g, ""))) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-min-char").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             }
             break;
@@ -184,14 +192,17 @@ function validateField(input) {
             if(inputValue === "") {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-blank").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             } else if(hasLetterRegex.test(inputValue)) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-format").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             } else if(!dateRegex.test(inputValue)) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-min-char").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             }
             break;
@@ -203,14 +214,17 @@ function validateField(input) {
                 if(inputValue === "") {
                     input.classList.add("form__inputs--error");
                     input.parentElement.parentElement.previousElementSibling.querySelector(".form__inputs-error-blank").style.display = "block";
+                    form.classList.add("form--invalid");
                     send = false
                 } else if(hasLetterRegex.test(inputValue)) {
                     input.classList.add("form__inputs--error");
                     input.parentElement.parentElement.previousElementSibling.querySelector(".form__inputs-error-format").style.display = "block";
+                    form.classList.add("form--invalid");
                     send = false
                 } else if(!dateRegex.test(inputValue)) {
                     input.classList.add("form__inputs--error");
                     input.parentElement.parentElement.previousElementSibling.querySelector(".form__inputs-error-min-char").style.display = "block";
+                    form.classList.add("form--invalid");
                     send = false
                 }
             }
@@ -220,14 +234,17 @@ function validateField(input) {
             if(inputValue === "") {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-blank").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             } else if(hasLetterRegex.test(inputValue)) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-format").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             } else if(!cvcRegex.test(inputValue)) {
                 input.classList.add("form__inputs--error");
                 input.parentElement.parentElement.querySelector(".form__inputs-error-min-char").style.display = "block";
+                form.classList.add("form--invalid");
                 send = false
             }
             break;

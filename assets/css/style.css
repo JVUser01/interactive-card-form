@@ -315,6 +315,10 @@
         max-width: 326px;
     }
 
+    .form--invalid {
+        margin-top: 37px;
+    }
+
     .success-message {
         max-width: 326px;
     }
